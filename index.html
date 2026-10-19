@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TOYOTA GR86 — Pure Driving Experience</title>
+<meta name="description" content="Independent Toyota GR86 fan site.">
+<meta name="theme-color" content="#050506">
+<link rel="preload" href="assets/toyota-logo.glb" as="fetch" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-on">
+
+<div id="intro" aria-hidden="true">
+  <div class="i-logo"><canvas id="logo-gl"></canvas><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="coinG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fafafa"/><stop offset=".5" stop-color="#b9bcc4"/><stop offset="1" stop-color="#f1f1f3"/></linearGradient></defs>
+    <circle cx="50" cy="50" r="48" fill="url(#coinG)"/>
+    <circle cx="50" cy="50" r="43" fill="none" stroke="#8d9099" stroke-width="1.2"/>
+    <g fill="none" stroke="#eb0a1e" stroke-width="4.2">
+      <ellipse cx="50" cy="50" rx="33" ry="22"/>
+      <ellipse cx="50" cy="43" rx="20" ry="9.5"/>
+      <ellipse cx="50" cy="50" rx="9.5" ry="21"/>
+    </g>
+  </svg></div>
+  <span class="i-line"></span>
+  <p class="i-brand">TOYOTA GAZOO RACING</p>
+  <h1 class="i-gr">GR86</h1>
+  <button id="skip" type="button">skip ›</button>
+</div>
+
+<header id="nav">
+  <a class="logo" href="#home" aria-label="GR86 home"><b>GR</b>86</a>
+  <nav id="menu" aria-label="Main menu">
+    <a href="#home">HOME</a><a href="#design">DESIGN</a><a href="#performance">PERFORMANCE</a><a href="#specs">SPECS</a><a href="#colors">COLORS</a>
+  </nav>
+  <a class="btn btn-sm" href="#design">EXPLORE</a>
+  <button id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+</header>
+
+<main>
+<div class="hero-track" id="home">
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-visual" id="stage">
+    <canvas id="gl" aria-label="3D viewer of the Toyota GR86. Drag to rotate."></canvas>
+    <div id="fallback" class="fallback" hidden>
+      <img id="fb-img" alt="Toyota GR86" src="assets/gr86-hero.jpg" onerror="this.remove()">
+    </div>
+  </div>
+  <div class="hero-copy">
+    <p class="eyebrow">ZN8 · 2022 · <span>FRONT-ENGINE / RWD</span></p>
+    <h2 class="big">GR<span>86</span></h2>
+    <div class="stages">
+      <div class="stage on">
+        <h3 class="headline">PURE DRIVING.<br>PURE EMOTION.</h3>
+        <p class="lead">A 2+2 coupe with a boxer engine, rear-wheel drive and a low center of gravity — built for one thing: the joy of driving.</p>
+        <div class="cta"><a class="btn" href="#design">EXPLORE THE GR86</a><a class="btn ghost" href="#specs">DISCOVER SPECS</a></div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <h3 class="headline">BOXER HEART.<br>LOW &amp; CENTERED.</h3>
+        <p class="lead">A 2.4 L boxer engine with horizontally opposed cylinders: a low center of gravity and a distinctive sound.</p>
+        <div class="cta"><a class="btn ghost" href="#performance">PERFORMANCE</a></div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <h3 class="headline">REAR-WHEEL<br>DRIVE.</h3>
+        <p class="lead">Push from behind, honest steering, and a balance that makes every corner feel alive.</p>
+        <div class="cta"><a class="btn ghost" href="#specs">DISCOVER SPECS</a></div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <h3 class="headline">SIX GEARS.<br>ONE CLUTCH.</h3>
+        <p class="lead">Available with a 6-speed manual that rewards precise inputs — a 6-speed automatic is also offered.</p>
+        <div class="cta"><a class="btn ghost" href="#performance">PERFORMANCE</a></div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <h3 class="headline">BUILT ON BALANCE.<br>EVERY INPUT FELT.</h3>
+        <p class="lead">Compact, rigid and tuned for feedback, so the car responds exactly the way you ask.</p>
+        <div class="cta"><a class="btn ghost" href="#design">DESIGN</a></div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <h3 class="headline">LOW. SHARP.<br>READY.</h3>
+        <p class="lead">A low, wide silhouette with classic coupe proportions, ready for both the road and the track.</p>
+        <div class="cta"><a class="btn" href="#design">EXPLORE THE GR86</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-meta" aria-hidden="true"><span>MODEL 01 / GR86</span><span>FA24 BOXER</span><span>6 MT · 6 AT</span></div>
+  <div class="prog" aria-hidden="true"><b id="pnum">01</b><span><i id="pbar"></i></span><em id="ptotal">06</em></div>
+</section>
+</div>
+
+<section id="design" class="sec">
+  <p class="tag reveal">01 — DESIGN</p>
+  <h2 class="h2 reveal">LOW. WIDE. <em>UNAPOLOGETIC.</em></h2>
+  <div class="design-list">
+      <article class="slide reveal">
+        <figure class="ph"><img data-src="assets/design-interior.jpg" alt="Toyota GR86 interior"></figure>
+        <div class="desc"><span class="num">01 / 05 — INTERIOR</span><h3>Driver-focused cockpit</h3><p>A low seating position, a thick-rimmed steering wheel and clear gauges keep your attention on the road.</p></div>
+      </article>
+      <article class="slide reveal">
+        <figure class="ph"><img data-src="assets/design-front.jpg" alt="Front of the GR86"></figure>
+        <div class="desc"><span class="num">02 / 05 — FRONT</span><h3>Low, wide nose</h3><p>A sharp lamp signature and a large lower intake give the GR86 its planted, aggressive stance.</p></div>
+      </article>
+      <article class="slide reveal">
+        <figure class="ph"><img data-src="assets/design-side.jpg" alt="Side silhouette of the GR86"></figure>
+        <div class="desc"><span class="num">03 / 05 — SIDE</span><h3>Classic coupe profile</h3><p>A long hood, a short rear deck and a low roofline make the silhouette instantly recognizable.</p></div>
+      </article>
+      <article class="slide reveal">
+        <figure class="ph"><img data-src="assets/design-rear.jpg" alt="Rear of the GR86"></figure>
+        <div class="desc"><span class="num">04 / 05 — REAR</span><h3>Planted rear stance</h3><p>Wide rear haunches and a clean, low tail reinforce the rear-wheel-drive character.</p></div>
+      </article>
+      <article class="slide reveal">
+        <figure class="ph"><img data-src="assets/design-detail.jpg" alt="Headlight and wheel of the GR86"></figure>
+        <div class="desc"><span class="num">05 / 05 — DETAILS</span><h3>wheels</h3><p>sporty wheels complete the car’s purposeful character.</p></div>
+      </article>
+  </div>
+</section>
+
+<section id="performance" class="sec dark">
+  <p class="tag reveal">02 — PERFORMANCE</p>
+  <h2 class="h2 reveal">ENGINEERED FOR THE <em>JOY OF DRIVING.</em></h2>
+  <div class="cards">
+    <article class="card reveal"><span class="n">4</span><h3>BOXER ENGINE</h3><p>Horizontally opposed cylinders keep the center of gravity low and give the engine its distinctive sound.</p></article>
+    <article class="card reveal"><span class="n">RWD</span><h3>REAR-WHEEL DRIVE</h3><p>Rear-wheel drive: pure balance and honest response.</p></article>
+    <article class="card reveal"><span class="n">LOW</span><h3>CENTER OF GRAVITY</h3><p>Low engine and seating positions for controlled body movement.</p></article>
+    <article class="card reveal"><span class="n">6MT</span><h3>MANUAL GEARBOX</h3><p>A 6-speed manual transmission is available (a 6-speed automatic is also offered).</p></article>
+    <article class="card reveal"><span class="n">50/50</span><h3>BALANCE <small>(verify)</small></h3><p>Weight distribution is close to even. The exact figure should be checked against an official source.</p></article>
+  </div>
+</section>
+
+<section id="specs" class="sec">
+  <p class="tag reveal">03 — SPECS</p>
+  <h2 class="h2 reveal">THE <em>DASHBOARD.</em></h2>
+  <p class="note reveal">Specifications for the 2nd-generation GR86 (ZN8), US-market version. Other markets may differ — verify at toyota.com / gazooracing.com.</p>
+  <div class="dash reveal">
+    <div class="gauge"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="g-bg"/><circle id="arc" cx="60" cy="60" r="52" class="g-fg"/></svg><div><b id="hp" data-to="228">0</b><small>HP @ 7,000 RPM</small></div></div>
+    <ul class="kv">
+      <li><span>ENGINE</span><b>FA24 · 4-cylinder boxer, DOHC</b></li>
+      <li><span>DISPLACEMENT</span><b>2,387 cc (2.4 L)</b></li>
+      <li><span>MAX POWER</span><b>228 hp (SAE net)</b></li>
+      <li><span>MAX TORQUE</span><b>184 lb-ft (≈ 250 Nm) @ 3,700 rpm</b></li>
+      <li><span>TRANSMISSION</span><b>6-speed manual / 6-speed automatic</b></li>
+      <li><span>DRIVETRAIN</span><b>Rear-wheel drive</b></li>
+      <li><span>SEATING</span><b>2+2 (4 seats)</b></li>
+      <li><span>DIMENSIONS L×W×H</span><b>4,265 × 1,775 × 1,310 mm</b></li>
+      <li><span>WHEELBASE</span><b>2,575 mm</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="colors" class="sec dark">
+  <p class="tag reveal">04 — COLORS</p>
+  <h2 class="h2 reveal">PICK YOUR <em>PAINT.</em></h2>
+  <div class="color-ui reveal">
+    <div class="swatch-stage" id="cstage"><img id="cimg" alt="" hidden><div id="cdot"></div></div>
+    <div>
+      <p class="cname">Color: <b id="cname">—</b></p>
+      <div class="dots" id="dots" role="radiogroup" aria-label="Color options"></div>
+      <p class="note" id="cnote"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="f-top"><a class="logo" href="#home"><b>GR</b>86</a>
+    <nav><a href="#home">HOME</a><a href="#design">DESIGN</a><a href="#performance">PERFORMANCE</a><a href="#specs">SPECS</a></nav></div>
+  <p class="f-big">BUILT FOR DRIVING ENTHUSIASTS.</p>
+  <p class="f-small">© <span id="yr"></span> Independent fan project. Not an official Toyota / TOYOTA GAZOO Racing website.</p>
+</footer>
+
+<button id="top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
